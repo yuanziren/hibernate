@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- 配置数据库连接信息 -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property
+                name="connection.url">jdbc:mysql://127.0.0.1:3306/hibernate5</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">123456</property>
+        <!-- 数据库方言 -->
+        <property name="dialect">org.hibernate.dialect.MySQL57Dialect</property>
+        <!-- 数据库更新方式 -->
+        <property name="hbm2ddl.auto">update</property>
+        <!-- 格式化sql -->
+        <property name="format_sql">true</property>
+        <!-- 添加*.hbm.xml映射 -->
+        <mapping resource="com/shsxt/pojo/User.hbm.xml"/>
+    </session-factory>
+</hibernate-configuration>
